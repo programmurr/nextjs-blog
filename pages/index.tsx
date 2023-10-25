@@ -4,10 +4,12 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
+import { GetStaticProps } from 'next';
 
-// https://nextjs.org/learn/basics/api-routes/api-routes-details
+// Then set up eslint
+// Then Tailwind
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
   return {
     props: {
@@ -16,7 +18,13 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({ allPostsData }) {
+export default function Home({ allPostsData }: {
+  allPostsData: {
+    date: string;
+    title: string;
+    id: string;
+  }[]
+}) {
   return (
     <Layout home>
       <Head>
