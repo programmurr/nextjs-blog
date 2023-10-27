@@ -6,8 +6,8 @@ import Link from "next/link";
 import Date from "../components/date";
 import { GetStaticProps } from "next";
 
-// Then set up eslint
-// Then Tailwind
+// Set up Jest and RTL https://nextjs.org/docs/pages/building-your-application/optimizing/testing#jest-and-react-testing-library
+// Set up Tailwind
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
