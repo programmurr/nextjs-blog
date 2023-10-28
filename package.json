@@ -4,7 +4,8 @@
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "date-fns": "^2.30.0",
@@ -22,9 +23,11 @@
   "devDependencies": {
     "@types/node": "20.8.8",
     "@types/react": "18.2.31",
+    "cypress": "^13.3.3",
     "eslint": "8.52.0",
     "eslint-config-next": "13.5.6",
     "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-cypress": "^2.15.1",
     "prettier": "3.0.3",
     "typescript": "5.2.2"
   }
