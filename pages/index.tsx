@@ -28,23 +28,28 @@ export default function Home({
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section>
-        <p>Cypress testing set up!</p>
-        <p>
+      <section className="flex flex-col items-center mb-5">
+        <p className="text-xl mb-3">Cypress testing set up!</p>
+        <p className="text-lg">
           (This is a sample website - you&apos;ll be building a site like this
           on <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
         </p>
       </section>
       <section>
-        <h2>Blog</h2>
-        <ul>
+        <h2 className="text-lg font-bold">Blog</h2>
+        <ul className="mt-1">
           {allPostsData.map(({ id, date, title }) => (
-            <li key={id}>
-              <Link href={`/posts/${id}`}>{title}</Link>
+            <li key={id} className="mt-2">
+              <Link
+                href={`/posts/${id}`}
+                className="text-xl text-blue-600 hover:underline"
+              >
+                {title}
+              </Link>
               <br />
-              <small>
+              <div>
                 <Date dateString={date} />
-              </small>
+              </div>
             </li>
           ))}
         </ul>

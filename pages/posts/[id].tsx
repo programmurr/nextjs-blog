@@ -18,12 +18,15 @@ export default function Post({
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article>
-        <h1>{postData.title}</h1>
-        <div>
+      <article className="flex flex-col items-center mb-3">
+        <h1 className="text-2xl">{postData.title}</h1>
+        <div className="mt-1 mb-3">
           <Date dateString={postData.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div
+          className="w-4/5 flex flex-col [&>ul]:list-disc [&>ul]:self-center [&>ul]:mt-1 [&>ul]:mb-1"
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+        />
       </article>
     </Layout>
   );
